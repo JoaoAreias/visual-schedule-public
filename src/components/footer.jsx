@@ -28,8 +28,8 @@ function Footer(props) {
 
   return (
     <>
-    <Dialog open={addActivityDialog} onClose={/*  THE CAT ERASED THIS LINE */} maxWidth={false}>
-      <AddActivityCard close={/*  THE CAT ERASED THIS LINE */} user={props.user}/>
+    <Dialog open={addActivityDialog} onClose={closeActivityDialog} maxWidth={false}>
+      <AddActivityCard close={closeActivityDialog} user={props.user}/>
     </Dialog>
 
     <Paper sx={{ 
@@ -39,7 +39,7 @@ function Footer(props) {
         <Grid container justifyContent="center">
             <Grid item>
                 
-                <AddActivityButtom onClick={/*  THE CAT ERASED THIS LINE */}/> &nbsp;
+                <AddActivityButtom onClick={openActivityDialog}/> &nbsp;
                 <RemoveActivityButtom onClick={() => setRemoveActivity(!removeActivity)}/>
             </Grid> 
         </Grid>
